@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK SCISSOR PAPER | GAME</title>
+    <link rel="stylesheet" href="CSS/game.css">
+    <script src="JS/game.js"></script> 
+    <script src="JS/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#reset").click(function(){
+                $("#cont").show();
+            });
+        });
+    </script> 
+</head>
+<body>
+ 
+    <div id="game_over">
+        <div id="win_cont">
+            <img src="" width="300px" id="winner_pic">
+            <p id="winner"></p>
+        </div>
+        <p id="txt">DO YOU WANT TO PLAY AGAIN?</p>
+        <div id="btn_cont">
+            <button type="button"  id="btn_yes"><a href="index.html">YES</a></button>
+            <button type="button"  id="btn_no"><a href="#">NO</a></button>
+        </div>   
+        
+    </div>
+    <div class="bg">
+        <nav>
+            <div id="health-bar1">
+                <div id="box-1"></div>
+                <div id="box-2"></div>
+                <div id="box-3"></div>
+                <div id="box-4"></div>
+                <div id="box-5"></div>
+            </div>
+            <div id="timer">60</div>
+            <div id="health-bar2">
+                <div id="box-6"></div>
+                <div id="box-7"></div>
+                <div id="box-8"></div>
+                <div id="box-9"></div>
+                <div id="box-10"></div>
+            </div>
+        </nav>
+        <div id="character_container">
+            <div id="character1">
+                <img src="PIC/ice.gif" width="320px" height="9000px" id="attack_p1">
+                <img src="PIC/p1.gif" width="250px" id="c1">
+            </div>
+            <div id="character2">
+                <img src="PIC/p2.gif" width="250px">
+                <img src="PIC/fire.gif" width="250px" height="auto" id="attack_p2">
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="btn_control">
+            <br><p>[a] - ROCK<br><br>
+            [s] - SCISSOR<br><br>
+            [d] - PAPER</p><br>
+        </div>
+        <div id="choices1">
+            <div id="player1">
+                <label id="p1"></label>
+                <img src="" id="selected_choice1">
+            </div>
+        </div>
+        <label id="ins">
+        </label>
+        <button type="button" id="reset" onclick='clean()'>FIGHT AGAIN!</button>
+        
+        <div id="choices2">
+            <div id="player2">
+                <label id="p2"></label>
+                <img src="" id="selected_choice2">
+            </div>
+        </div>
+        <div class="btn_control">
+            <br><p>[1] - ROCK<br><br>
+            [2] - SCISSOR<br><br>
+            [3] - PAPER</p><br>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
